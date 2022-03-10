@@ -17,7 +17,6 @@ public class PlayerMuvment : MonoBehaviour
     public float checkRadius = 0.2f;
     public LayerMask Ground;
     public int maxJmpValue = 1;
-    public float speedY;
 
 
     private Vector2 moveVector;
@@ -63,7 +62,7 @@ public class PlayerMuvment : MonoBehaviour
         {
             rb.AddForce(Vector2.up * jumpForce);
         } 
-        if (onGround) { jumpCount = 0; }
+        //if (onGround) { jumpCount = 0; }
     }
 
 
