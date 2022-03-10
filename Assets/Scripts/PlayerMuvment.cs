@@ -15,7 +15,7 @@ public class PlayerMuvment : MonoBehaviour
     public Transform GroundCheck;
     public Transform WallCheck;
     public float checkRadius = 0.2f;
-    public LayerMask Ground;
+    public LayerMask Ground, Cube;
     public int maxJmpValue = 1;
 
 
@@ -62,13 +62,13 @@ public class PlayerMuvment : MonoBehaviour
         {
             rb.AddForce(Vector2.up * jumpForce);
         } 
-        //if (onGround) { jumpCount = 0; }
+        if (onGround) { jumpCount = 0; }
     }
 
 
     void ChakingGround()
     {
-        onGround = Physics2D.OverlapCircle(GroundCheck.position, checkRadius, Ground);
+        onGround = Physics2D.OverlapCircle(GroundCheck.position, checkRadius, Ground) || Physics2D.OverlapCircle(GroundCheck.position, checkRadius, Cube);
         anim.SetBool("onGround", onGround);
     }
     void WallChecker()
@@ -76,4 +76,6 @@ public class PlayerMuvment : MonoBehaviour
         onWall = Physics2D.OverlapCircle(WallCheck.position, checkRadius, Ground);
         anim.SetBool("onWall", onWall);
     }
+
+    
 }

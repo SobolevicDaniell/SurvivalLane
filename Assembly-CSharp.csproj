@@ -61,6 +61,9 @@
     <Compile Include="Assets\Scripts\PlayerMuvment.cs" />
     <Compile Include="Assets\Prototype Hero Demo - Pixel Art\Demo\Sensor_Prototype.cs" />
     <Compile Include="Assets\Prototype Hero Demo - Pixel Art\Demo\AudioManager_PrototypeHero.cs" />
+    <Compile Include="Assets\Scripts\BoxScript.cs" />
+    <Compile Include="Assets\Scripts\TrigerFall.cs" />
+    <Compile Include="Assets\Scripts\Death.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
